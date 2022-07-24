@@ -22,6 +22,7 @@ app.get("/", (req, res) => {
 });
 //set port, listen for requests
 const PORT = process.env.PORT || 8080; //either local port as detected by process.env or the value of 8080;
+require("./app/routes/tutorial.routes")(app); //what is the 2nd app for?
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 })
